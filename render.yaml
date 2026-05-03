@@ -1,0 +1,12 @@
+# Blueprint for https://render.com — commit this repo and "New > Blueprint".
+services:
+  - type: web
+    name: power-stats-analyzer
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: OPENAI_MODEL
+        value: gpt-4o-mini
